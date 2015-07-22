@@ -3,16 +3,14 @@
 1 verbose cli   'c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
 1 verbose cli   'install',
 1 verbose cli   '--save',
-1 verbose cli   'gulp-jslint,',
-1 verbose cli   'gulp-csslint,',
-1 verbose cli   'gulp-uglify' ]
+1 verbose cli   'gulp-sourcemap' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.36
 4 warn package.json TIPLY-FRONTEND@1.0.0 No repository field.
 5 warn package.json TIPLY-FRONTEND@1.0.0 No README data
 6 verbose readDependencies using package.json deps
-7 verbose cache add [ 'gulp-jslint,', null ]
-8 verbose cache add name=undefined spec="gulp-jslint," args=["gulp-jslint,",null]
+7 verbose cache add [ 'gulp-sourcemap', null ]
+8 verbose cache add name=undefined spec="gulp-sourcemap" args=["gulp-sourcemap",null]
 9 verbose parsed url { protocol: null,
 9 verbose parsed url   slashes: null,
 9 verbose parsed url   auth: null,
@@ -22,201 +20,69 @@
 9 verbose parsed url   hash: null,
 9 verbose parsed url   search: null,
 9 verbose parsed url   query: null,
-9 verbose parsed url   pathname: 'gulp-jslint,',
-9 verbose parsed url   path: 'gulp-jslint,',
-9 verbose parsed url   href: 'gulp-jslint,' }
-10 verbose cache add [ 'gulp-csslint,', null ]
-11 verbose cache add name=undefined spec="gulp-csslint," args=["gulp-csslint,",null]
-12 verbose parsed url { protocol: null,
-12 verbose parsed url   slashes: null,
-12 verbose parsed url   auth: null,
-12 verbose parsed url   host: null,
-12 verbose parsed url   port: null,
-12 verbose parsed url   hostname: null,
-12 verbose parsed url   hash: null,
-12 verbose parsed url   search: null,
-12 verbose parsed url   query: null,
-12 verbose parsed url   pathname: 'gulp-csslint,',
-12 verbose parsed url   path: 'gulp-csslint,',
-12 verbose parsed url   href: 'gulp-csslint,' }
-13 verbose cache add [ 'gulp-uglify', null ]
-14 verbose cache add name=undefined spec="gulp-uglify" args=["gulp-uglify",null]
-15 verbose parsed url { protocol: null,
-15 verbose parsed url   slashes: null,
-15 verbose parsed url   auth: null,
-15 verbose parsed url   host: null,
-15 verbose parsed url   port: null,
-15 verbose parsed url   hostname: null,
-15 verbose parsed url   hash: null,
-15 verbose parsed url   search: null,
-15 verbose parsed url   query: null,
-15 verbose parsed url   pathname: 'gulp-uglify',
-15 verbose parsed url   path: 'gulp-uglify',
-15 verbose parsed url   href: 'gulp-uglify' }
-16 silly lockFile 9fc25fbe-gulp-jslint gulp-jslint,
-17 verbose lock gulp-jslint, C:\Users\tan.nd\AppData\Roaming\npm-cache\9fc25fbe-gulp-jslint.lock
-18 silly lockFile 7a53290c-gulp-csslint gulp-csslint,
-19 verbose lock gulp-csslint, C:\Users\tan.nd\AppData\Roaming\npm-cache\7a53290c-gulp-csslint.lock
-20 silly lockFile 15fab96b-gulp-uglify gulp-uglify
-21 verbose lock gulp-uglify C:\Users\tan.nd\AppData\Roaming\npm-cache\15fab96b-gulp-uglify.lock
-22 silly lockFile 9fc25fbe-gulp-jslint gulp-jslint,
-23 silly lockFile 9fc25fbe-gulp-jslint gulp-jslint,
-24 silly lockFile 15fab96b-gulp-uglify gulp-uglify
-25 silly lockFile 15fab96b-gulp-uglify gulp-uglify
-26 silly lockFile 7a53290c-gulp-csslint gulp-csslint,
-27 silly lockFile 7a53290c-gulp-csslint gulp-csslint,
-28 verbose addNamed [ 'gulp-jslint,', '' ]
-29 verbose addNamed [ null, '*' ]
-30 silly lockFile 7c5b347c-gulp-jslint gulp-jslint,@
-31 verbose lock gulp-jslint,@ C:\Users\tan.nd\AppData\Roaming\npm-cache\7c5b347c-gulp-jslint.lock
-32 verbose addNamed [ 'gulp-uglify', '' ]
-33 verbose addNamed [ null, '*' ]
-34 silly lockFile 044a9113-gulp-uglify gulp-uglify@
-35 verbose lock gulp-uglify@ C:\Users\tan.nd\AppData\Roaming\npm-cache\044a9113-gulp-uglify.lock
-36 verbose addNamed [ 'gulp-csslint,', '' ]
-37 verbose addNamed [ null, '*' ]
-38 silly lockFile 83b8d05f-gulp-csslint gulp-csslint,@
-39 verbose lock gulp-csslint,@ C:\Users\tan.nd\AppData\Roaming\npm-cache\83b8d05f-gulp-csslint.lock
-40 silly addNameRange { name: 'gulp-jslint,', range: '*', hasData: false }
-41 silly addNameRange { name: 'gulp-uglify', range: '*', hasData: false }
-42 silly addNameRange { name: 'gulp-csslint,', range: '*', hasData: false }
-43 verbose request where is /gulp-jslint,
-44 verbose request registry https://registry.npmjs.org/
-45 verbose request id 4fcff00589ffeba0
-46 verbose url raw /gulp-jslint,
-47 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-jslint%2C' ]
-48 verbose url resolved https://registry.npmjs.org/gulp-jslint%2C
-49 verbose request where is https://registry.npmjs.org/gulp-jslint%2C
-50 info trying registry request attempt 1 at 10:36:14
-51 http GET https://registry.npmjs.org/gulp-jslint%2C
-52 verbose request where is /gulp-csslint,
-53 verbose request registry https://registry.npmjs.org/
-54 verbose url raw /gulp-csslint,
-55 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-csslint%2C' ]
-56 verbose url resolved https://registry.npmjs.org/gulp-csslint%2C
-57 verbose request where is https://registry.npmjs.org/gulp-csslint%2C
-58 info trying registry request attempt 1 at 10:36:14
-59 http GET https://registry.npmjs.org/gulp-csslint%2C
-60 verbose request where is /gulp-uglify
-61 verbose request registry https://registry.npmjs.org/
-62 verbose url raw /gulp-uglify
-63 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-uglify' ]
-64 verbose url resolved https://registry.npmjs.org/gulp-uglify
-65 verbose request where is https://registry.npmjs.org/gulp-uglify
-66 info trying registry request attempt 1 at 10:36:14
-67 verbose etag "2DWZS4O2LN1OPCQHZF5GWB6R0"
-68 http GET https://registry.npmjs.org/gulp-uglify
-69 http 404 https://registry.npmjs.org/gulp-jslint%2C
-70 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-70 verbose headers   'content-type': 'application/json',
-70 verbose headers   'cache-control': 'max-age=0',
-70 verbose headers   'content-length': '51',
-70 verbose headers   'accept-ranges': 'bytes',
-70 verbose headers   date: 'Wed, 22 Jul 2015 03:36:04 GMT',
-70 verbose headers   via: '1.1 varnish',
-70 verbose headers   age: '0',
-70 verbose headers   connection: 'keep-alive',
-70 verbose headers   'x-served-by': 'cache-hkg6825-HKG',
-70 verbose headers   'x-cache': 'MISS',
-70 verbose headers   'x-cache-hits': '0',
-70 verbose headers   'x-timer': 'S1437536164.240868,VS0,VE183' }
-71 silly registry.get cb [ 404,
-71 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-71 silly registry.get     'content-type': 'application/json',
-71 silly registry.get     'cache-control': 'max-age=0',
-71 silly registry.get     'content-length': '51',
-71 silly registry.get     'accept-ranges': 'bytes',
-71 silly registry.get     date: 'Wed, 22 Jul 2015 03:36:04 GMT',
-71 silly registry.get     via: '1.1 varnish',
-71 silly registry.get     age: '0',
-71 silly registry.get     connection: 'keep-alive',
-71 silly registry.get     'x-served-by': 'cache-hkg6825-HKG',
-71 silly registry.get     'x-cache': 'MISS',
-71 silly registry.get     'x-cache-hits': '0',
-71 silly registry.get     'x-timer': 'S1437536164.240868,VS0,VE183' } ]
-72 silly lockFile 7c5b347c-gulp-jslint gulp-jslint,@
-73 silly lockFile 7c5b347c-gulp-jslint gulp-jslint,@
-74 http 304 https://registry.npmjs.org/gulp-uglify
-75 silly registry.get cb [ 304,
-75 silly registry.get   { date: 'Wed, 22 Jul 2015 03:36:04 GMT',
-75 silly registry.get     via: '1.1 varnish',
-75 silly registry.get     'cache-control': 'max-age=60',
-75 silly registry.get     etag: '"2DWZS4O2LN1OPCQHZF5GWB6R0"',
-75 silly registry.get     age: '44',
-75 silly registry.get     connection: 'keep-alive',
-75 silly registry.get     'x-served-by': 'cache-hkg6824-HKG',
-75 silly registry.get     'x-cache': 'HIT',
-75 silly registry.get     'x-cache-hits': '2',
-75 silly registry.get     'x-timer': 'S1437536164.243940,VS0,VE0',
-75 silly registry.get     vary: 'Accept' } ]
-76 verbose etag https://registry.npmjs.org/gulp-uglify from cache
-77 silly addNameRange number 2 { name: 'gulp-uglify', range: '*', hasData: true }
-78 silly addNameRange versions [ 'gulp-uglify',
-78 silly addNameRange   [ '0.0.1',
-78 silly addNameRange     '0.0.3',
-78 silly addNameRange     '0.0.4',
-78 silly addNameRange     '0.1.0',
-78 silly addNameRange     '0.2.0',
-78 silly addNameRange     '0.2.1',
-78 silly addNameRange     '0.3.0',
-78 silly addNameRange     '0.3.1',
-78 silly addNameRange     '0.3.2',
-78 silly addNameRange     '1.0.0-0',
-78 silly addNameRange     '1.0.0',
-78 silly addNameRange     '1.0.1',
-78 silly addNameRange     '1.0.2',
-78 silly addNameRange     '1.1.0',
-78 silly addNameRange     '1.2.0' ] ]
-79 verbose addNamed [ 'gulp-uglify', '1.2.0' ]
-80 verbose addNamed [ '1.2.0', '1.2.0' ]
-81 silly lockFile 9d272576-gulp-uglify-1-2-0 gulp-uglify@1.2.0
-82 verbose lock gulp-uglify@1.2.0 C:\Users\tan.nd\AppData\Roaming\npm-cache\9d272576-gulp-uglify-1-2-0.lock
-83 silly lockFile 9d272576-gulp-uglify-1-2-0 gulp-uglify@1.2.0
-84 silly lockFile 9d272576-gulp-uglify-1-2-0 gulp-uglify@1.2.0
-85 silly lockFile 044a9113-gulp-uglify gulp-uglify@
-86 silly lockFile 044a9113-gulp-uglify gulp-uglify@
-87 http 404 https://registry.npmjs.org/gulp-csslint%2C
-88 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-88 verbose headers   'content-type': 'application/json',
-88 verbose headers   'cache-control': 'max-age=0',
-88 verbose headers   'content-length': '51',
-88 verbose headers   'accept-ranges': 'bytes',
-88 verbose headers   date: 'Wed, 22 Jul 2015 03:36:05 GMT',
-88 verbose headers   via: '1.1 varnish',
-88 verbose headers   age: '0',
-88 verbose headers   connection: 'keep-alive',
-88 verbose headers   'x-served-by': 'cache-hkg6821-HKG',
-88 verbose headers   'x-cache': 'MISS',
-88 verbose headers   'x-cache-hits': '0',
-88 verbose headers   'x-timer': 'S1437536164.254316,VS0,VE959' }
-89 silly registry.get cb [ 404,
-89 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-89 silly registry.get     'content-type': 'application/json',
-89 silly registry.get     'cache-control': 'max-age=0',
-89 silly registry.get     'content-length': '51',
-89 silly registry.get     'accept-ranges': 'bytes',
-89 silly registry.get     date: 'Wed, 22 Jul 2015 03:36:05 GMT',
-89 silly registry.get     via: '1.1 varnish',
-89 silly registry.get     age: '0',
-89 silly registry.get     connection: 'keep-alive',
-89 silly registry.get     'x-served-by': 'cache-hkg6821-HKG',
-89 silly registry.get     'x-cache': 'MISS',
-89 silly registry.get     'x-cache-hits': '0',
-89 silly registry.get     'x-timer': 'S1437536164.254316,VS0,VE959' } ]
-90 silly lockFile 83b8d05f-gulp-csslint gulp-csslint,@
-91 silly lockFile 83b8d05f-gulp-csslint gulp-csslint,@
-92 error 404 404 Not Found: gulp-jslint%2C
-92 error 404
-92 error 404 'gulp-jslint%2C' is not in the npm registry.
-92 error 404 You should bug the author to publish it
-92 error 404 It was specified as a dependency of 'TIPLY-FRONTEND'
-92 error 404
-92 error 404 Note that you can also install from a
-92 error 404 tarball, folder, or http url, or git url.
-93 error System Windows_NT 6.2.9200
-94 error command "c:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "--save" "gulp-jslint," "gulp-csslint," "gulp-uglify"
-95 error cwd d:\test\free\tiply
-96 error node -v v0.10.36
-97 error npm -v 1.4.28
-98 error code E404
-99 verbose exit [ 1, true ]
+9 verbose parsed url   pathname: 'gulp-sourcemap',
+9 verbose parsed url   path: 'gulp-sourcemap',
+9 verbose parsed url   href: 'gulp-sourcemap' }
+10 silly lockFile cf95f475-gulp-sourcemap gulp-sourcemap
+11 verbose lock gulp-sourcemap C:\Users\tan.nd\AppData\Roaming\npm-cache\cf95f475-gulp-sourcemap.lock
+12 silly lockFile cf95f475-gulp-sourcemap gulp-sourcemap
+13 silly lockFile cf95f475-gulp-sourcemap gulp-sourcemap
+14 verbose addNamed [ 'gulp-sourcemap', '' ]
+15 verbose addNamed [ null, '*' ]
+16 silly lockFile 4a079ad1-gulp-sourcemap gulp-sourcemap@
+17 verbose lock gulp-sourcemap@ C:\Users\tan.nd\AppData\Roaming\npm-cache\4a079ad1-gulp-sourcemap.lock
+18 silly addNameRange { name: 'gulp-sourcemap', range: '*', hasData: false }
+19 verbose request where is /gulp-sourcemap
+20 verbose request registry https://registry.npmjs.org/
+21 verbose request id 13addb0f94897a3d
+22 verbose url raw /gulp-sourcemap
+23 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-sourcemap' ]
+24 verbose url resolved https://registry.npmjs.org/gulp-sourcemap
+25 verbose request where is https://registry.npmjs.org/gulp-sourcemap
+26 info trying registry request attempt 1 at 11:05:09
+27 http GET https://registry.npmjs.org/gulp-sourcemap
+28 http 404 https://registry.npmjs.org/gulp-sourcemap
+29 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+29 verbose headers   'content-type': 'application/json',
+29 verbose headers   'cache-control': 'max-age=0',
+29 verbose headers   'content-length': '51',
+29 verbose headers   'accept-ranges': 'bytes',
+29 verbose headers   date: 'Wed, 22 Jul 2015 04:04:59 GMT',
+29 verbose headers   via: '1.1 varnish',
+29 verbose headers   age: '0',
+29 verbose headers   connection: 'keep-alive',
+29 verbose headers   'x-served-by': 'cache-hkg6823-HKG',
+29 verbose headers   'x-cache': 'MISS',
+29 verbose headers   'x-cache-hits': '0',
+29 verbose headers   'x-timer': 'S1437537899.616324,VS0,VE169' }
+30 silly registry.get cb [ 404,
+30 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+30 silly registry.get     'content-type': 'application/json',
+30 silly registry.get     'cache-control': 'max-age=0',
+30 silly registry.get     'content-length': '51',
+30 silly registry.get     'accept-ranges': 'bytes',
+30 silly registry.get     date: 'Wed, 22 Jul 2015 04:04:59 GMT',
+30 silly registry.get     via: '1.1 varnish',
+30 silly registry.get     age: '0',
+30 silly registry.get     connection: 'keep-alive',
+30 silly registry.get     'x-served-by': 'cache-hkg6823-HKG',
+30 silly registry.get     'x-cache': 'MISS',
+30 silly registry.get     'x-cache-hits': '0',
+30 silly registry.get     'x-timer': 'S1437537899.616324,VS0,VE169' } ]
+31 silly lockFile 4a079ad1-gulp-sourcemap gulp-sourcemap@
+32 silly lockFile 4a079ad1-gulp-sourcemap gulp-sourcemap@
+33 error 404 404 Not Found: gulp-sourcemap
+33 error 404
+33 error 404 'gulp-sourcemap' is not in the npm registry.
+33 error 404 You should bug the author to publish it
+33 error 404 It was specified as a dependency of 'TIPLY-FRONTEND'
+33 error 404
+33 error 404 Note that you can also install from a
+33 error 404 tarball, folder, or http url, or git url.
+34 error System Windows_NT 6.2.9200
+35 error command "c:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "--save" "gulp-sourcemap"
+36 error cwd d:\test\free\tiply
+37 error node -v v0.10.36
+38 error npm -v 1.4.28
+39 error code E404
+40 verbose exit [ 1, true ]
