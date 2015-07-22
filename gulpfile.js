@@ -28,8 +28,8 @@ var srcPaths = {
     'src/assets/js/coffee/plugins/*.coffee'
   ],
   jsLibs: [
-    'src/assets/js/libs/bootstrap.js',
     'src/assets/js/libs/jquery-1.11.3.min.js',
+    'src/assets/js/libs/bootstrap.js',
     'src/assets/js/libs/plugins/*.js'
   ],
   jadeViews: ['src/views/jade/*.jade'],
