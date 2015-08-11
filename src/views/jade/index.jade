@@ -3,7 +3,7 @@ extends ./layout/main-layout
 var pageTitle = 'WELCOME PAGE'
 
 block container
-  .splash-screen
+  .splash-screen(splash-screen)
     .logo
       svg(version="1", baseProfile="full", viewBox="0 0 100 100", class="logo-lt", xmlns="http://www.w3.org/2000/svg")
         line(x1="75" y1="15" x2="25" y2="50" stroke="#232323" stroke-width="8" stroke-linecap="round" stroke-linejoin="miter")
@@ -14,10 +14,11 @@ block container
       svg(version="1", baseProfile="full", viewBox="0 0 100 100", class="logo-gt", xmlns="http://www.w3.org/2000/svg")
         line(x1="25" y1="15" x2="75" y2="50" stroke="#232323" stroke-width="8" stroke-linecap="round" stroke-linejoin="miter")
         line(x1="25" y1="85" x2="75" y2="50" stroke="#232323" stroke-width="8" stroke-linecap="round" stroke-linejoin="miter")
-  .game-menu
-    .button.btn1
+  .game-menu(game-nav)
+    h1.game-title NUPDOWN
+    .button.play
       object.icon(type="image/svg+xml" data="images/svg/play.svg")
       .label LET'S PLAY
-    .button.btn2
+    .button.how
       object.icon(type="image/svg+xml" data="images/svg/how.svg")
       .label HOW TO PLAY ?

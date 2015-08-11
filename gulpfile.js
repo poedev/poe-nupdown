@@ -18,19 +18,29 @@ var sequence = require('gulp-sequence');
 
 var publicPath = 'server/public';
 var server = 'server/server.js';
+var bowerPath = 'bower_components';
 
 var srcPaths = {
   less: ['src/assets/less/*.less'],
-  css: ['src/assets/css/*.css'],
+  css: [
+    bowerPath + '/bootstrap/dist/css/bootstrap.css',
+    bowerPath + '/bootstrap/dist/css/bootstrap-theme.css',
+    'src/assets/css/*.css'
+  ],
+  jsLibs: [
+    bowerPath + '/jquery/dist/jquery.min.js',
+    bowerPath + '/bootstrap/dist/js/bootstrap.js',
+    bowerPath + '/angularjs/angular.js',
+    'src/assets/js/libs/plugins/*.js'
+  ],
   coffee: [
     'src/assets/js/coffee/site.coffee',
     'src/assets/js/coffee/*.coffee',
     'src/assets/js/coffee/plugins/*.coffee'
   ],
-  jsLibs: [
-    'src/assets/js/libs/jquery-1.11.3.min.js',
-    'src/assets/js/libs/bootstrap.js',
-    'src/assets/js/libs/plugins/*.js'
+  ngApp: [
+    'src/assets/js/ng/app.coffee',
+    'src/assets/js/ng/modules/**/*.coffee'
   ],
   jadeViews: ['src/views/jade/*.jade'],
   jadeWatch: ['src/views/jade/*.jade', 'src/views/jade/**/*.jade'],
@@ -40,7 +50,9 @@ var srcPaths = {
     'src/assets/images/**/*.jpg',
     'src/assets/images/**/*.png',
     'src/assets/images/**/*.gif',
-    'src/assets/images/*.gif'
+    'src/assets/images/*.gif',
+    'src/assets/images/**/*.svg',
+    'src/assets/images/*.svg'
   ],
   media: ['src/assets/media/**/*','src/assets/media/*'],
   font: ['src/assets/fonts/*','src/assets/fonts/**/*']
@@ -79,6 +91,17 @@ gulp.task('raw-css', function(){
           .pipe(gulp.dest(buildPath.css));
 });
 
+gulp.task('ng', function(){
+  return gulp.src(srcPaths.ngApp)
+          .pipe(plumber())
+          .pipe(coffee())
+          .pipe(jshint())
+          .pipe(concat('ng-app.js'))
+          // .pipe(uglify())
+          // .pipe(rename('script.min.js'))
+          .pipe(gulp.dest(buildPath.js));
+});
+
 gulp.task('coffee-js', function(){
   return gulp.src(srcPaths.coffee)
           .pipe(plumber())
@@ -92,7 +115,6 @@ gulp.task('coffee-js', function(){
 
 gulp.task('image', function(){
   return gulp.src(srcPaths.image)
-          .pipe(imagemin())
           .pipe(gulp.dest(buildPath.image));
 });
 
@@ -122,7 +144,7 @@ gulp.task('jade-html', function(){
           .pipe(gulp.dest(buildPath.root));
 });
 
-gulp.task('public-build', ['less-css', 'raw-css', 'coffee-js', 'lib-js', 'jade-html', 'static-assets']);
+gulp.task('public-build', ['less-css', 'raw-css', 'coffee-js', 'ng', 'lib-js', 'jade-html', 'static-assets']);
 
 gulp.task('clean-public', function(){
   return gulp.src(publicPath)
@@ -131,8 +153,10 @@ gulp.task('clean-public', function(){
 
 gulp.task('watch', function(){
   gulp.watch(srcPaths.less, ['less-css']);
+  gulp.watch(srcPaths.image, ['image']);
   gulp.watch(srcPaths.css, ['raw-css']);
   gulp.watch(srcPaths.coffee, ['coffee-js']);
+  gulp.watch(srcPaths.ngApp, ['ng']);
   gulp.watch(srcPaths.jsLibs, ['lib-js']);
   gulp.watch(srcPaths.jadeWatch, ['jade-html']);
 });

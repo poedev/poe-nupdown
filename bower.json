@@ -1,0 +1,33 @@
+{
+  "name": "nupdown",
+  "version": "0.0.0",
+  "homepage": "https://github.com/poedev/poe-nupdown",
+  "authors": [
+    "Poe Nguyen"
+  ],
+  "description": "Front-end components",
+  "moduleType": [
+    "es6",
+    "globals"
+  ],
+  "keywords": [
+    "nupdown",
+    "bower",
+    "components"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.4.3",
+    "angular-ui-router": "~0.2.15",
+    "modernizr": "~2.8.3",
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4"
+  }
+}
