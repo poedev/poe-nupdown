@@ -1,7 +1,8 @@
 app = angular.module('nupdown')
 app.directive('splashScreen',
   [
-    () ->
+    'gameNavAPI',
+    (gameNavAPI) ->
       {
         restrict: 'A',
         link: () ->
@@ -95,7 +96,8 @@ app.directive('splashScreen',
               opacity: 0,
               delay: 3,
               onComplete: () ->
-                openGameMenu()
+                gameNavAPI.changeGameScene('menu');
+                console.log(gameNavAPI);
             })
             true
           setTimeout splashRun, 100

@@ -1,6 +1,7 @@
 app = angular.module('nupdown')
 app.directive('gameNav', [
-  () ->
+  'gameNavAPI',
+  (gameNavAPI) ->
     {
       restrict: 'A',
       link: (scope, elem, attrs) ->
@@ -23,6 +24,20 @@ app.directive('gameNav', [
             onComplete: () ->
               true
           })
+        scope.nav = gameNavAPI;
+        console.log scope.nav;
+        scope.$watch('nav.gameScene', checkGameState, true);
+
+        setInterval(
+          () ->
+            console.log scope.nav.gameScene
+          , 500
+        )
+
+        checkGameState = () ->
+          console.log "IN"
+          console.log arguments
+          true
 
         playBtn.on('click', () ->
           hideNav()
