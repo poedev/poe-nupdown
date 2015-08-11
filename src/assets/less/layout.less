@@ -34,10 +34,46 @@ h1 {
     .logo {
         width: 300px;
         height: 120px;
-        position: absolute;
+        position: fixed;
         top: 50%;
         left: 50%;
         margin-top: -60px;
         margin-left: -150px;
+    }
+}
+
+.game-menu {
+    width: 256px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -128px;
+    text-align: center;    
+    
+    .button {
+        width: 256px;
+        padding: 20px;
+        cursor: pointer;
+        margin-top: 12px;
+        border: 1px solid #333333;
+        &:hover {
+            background-color: #FFA726;
+        }
+        .icon {
+            width: 64px;
+            height: 64px;
+            margin: auto;
+            display: block;
+            color: #454545;
+            margin-bottom: 18px;
+        }
+        .label {
+            width: 100%;
+            height: auto;
+            font-size: 1.8rem;
+            color: #222222;
+        }
     }
 }

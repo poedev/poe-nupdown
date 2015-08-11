@@ -1,6 +1,16 @@
 $(document).ready(
   () ->
     console.log 'hello'
+
+  openGameMenu = () ->
+    TweenMax.to('body', 2, {
+      backgroundColor: '#FFD090'
+    })
+    TweenMax.staggerFrom('.game-menu .button', 0.5, {
+      y: 80,
+      opacity: 0
+    })    
+
   splashRun = () ->
     TweenMax.from('.logo-x', 1, {
       rotation: 720,
@@ -43,6 +53,8 @@ $(document).ready(
       ease: Power3.easeIn,
       opacity: 0,
       delay: 3,
+      onComplete: () ->
+        openGameMenu()
     })
     true
   setTimeout splashRun, 20
