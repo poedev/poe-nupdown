@@ -15,6 +15,7 @@ var plumber = require('gulp-plumber');
 var cssmin = require('gulp-minify-css');
 var autoprefix = require('gulp-autoprefixer');
 var sequence = require('gulp-sequence');
+var testServer = require('karma').Server;
 
 var publicPath = 'server/public';
 var server = 'server/server.js';
@@ -31,6 +32,7 @@ var srcPaths = {
     bowerPath + '/jquery/dist/jquery.min.js',
     bowerPath + '/bootstrap/dist/js/bootstrap.js',
     bowerPath + '/angularjs/angular.js',
+    bowerPath + '/angular-mocks/angular-mocks.js',
     'src/assets/js/libs/plugins/*.js'
   ],
   coffee: [
@@ -144,7 +146,6 @@ gulp.task('jade-html', function(){
           .pipe(gulp.dest(buildPath.root));
 });
 
-gulp.task('public-build', ['less-css', 'raw-css', 'coffee-js', 'ng', 'lib-js', 'jade-html', 'static-assets']);
 
 gulp.task('clean-public', function(){
   return gulp.src(publicPath)
@@ -161,12 +162,22 @@ gulp.task('watch', function(){
   gulp.watch(srcPaths.jadeWatch, ['jade-html']);
 });
 
+gulp.task('test', function (done) {
+  new testServer({
+    configFile: __dirname + '/test/karma.conf.coffee'
+  }, done).start();
+});
+
 gulp.task('run-server', function(){
   nodemon({
     script: server
   });
 });
 
-gulp.task('default', ['clean-public', 'public-build']);
+gulp.task('public-build', ['less-css', 'raw-css', 'coffee-js', 'ng', 'lib-js', 'jade-html', 'static-assets']);
 
-gulp.task('server', sequence('clean-public', 'public-build', 'run-server', 'watch'));
+gulp.task('default', sequence('clean-public', 'public-build'));
+
+gulp.task('test-server', sequence('clean-public', 'public-build', 'watch', 'test'));
+
+gulp.task('server', sequence('clean-public', 'public-build', 'run-server', 'test', 'watch'));

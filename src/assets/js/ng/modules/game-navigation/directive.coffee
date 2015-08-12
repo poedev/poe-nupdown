@@ -1,3 +1,5 @@
+#@module Game navigation
+#@role Directive.
 app = angular.module('nupdown')
 app.directive('gameNav', [
   'gameNavAPI',
@@ -24,9 +26,8 @@ app.directive('gameNav', [
             onComplete: () ->
               true
           })
-        scope.nav = gameNavAPI;
-        console.log scope.nav;
-        scope.$watch('nav.gameScene', checkGameState, true);
+        scope.nav = gameNavAPI
+        scope.$watch('nav.gameScene', checkGameState, true)
 
         setInterval(
           () ->

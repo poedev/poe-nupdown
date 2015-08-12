@@ -97,7 +97,6 @@ app.directive('splashScreen',
               delay: 3,
               onComplete: () ->
                 gameNavAPI.changeGameScene('menu');
-                console.log(gameNavAPI);
             })
             true
           setTimeout splashRun, 100
